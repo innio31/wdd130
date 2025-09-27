@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+footer {
+    margin-top: 15px;
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 nav {
       background-color: steelblue;
       padding: 1rem;
@@ -11,18 +22,22 @@ nav {
       justify-content: space-evenly;
       align-items: center;
     }
+
 nav a {
       display: block;
       padding: 0.5rem;
+      padding: 10px;
       text-decoration: none;
       font-size: 1.2rem;
       font-weight: 700;
       color: #fff; /% shorthand for white %/
     }
-h1{
+
+h1 {
     color: darkblue;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
+
 img {
     width: 150px;
     height:auto;
@@ -30,63 +45,64 @@ img {
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
+
 p {
     padding: 10px;
 }
+
 main {
     max-width:840px;
+    grid-column: 2/3;
 }
+  
 aside {
-    width: 20rem;
-    text-align: center;
+      width: 20rem;
+      text-align: center;
+      position: relative;
+      grid-column: 1/2;
+      grid-row: 1/2;
 }
-aside img {
-    width: 200px;
-    height: auto;
-}
+
 aside h2 {
-  position: relative;
-  top: 30px;
-  left: 0px;
+    position: absolute;
+    top: 47px;
+    left: 150px;
 }
+
+aside img {
+    float: right;
+    width:150px;
+    height: auto;
+    border: 1px solid black;
+    padding: 2px;
+    margin: 3rem;
+    box-shadow: 0 0 30px gray;
+}
+
 main img {
     width: 150px;
     height: auto;
-    float: right;
+    float: left;
 }
+
 p {
     padding: 0;
 }
-footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
-}
-/*Class Selectors*/
+
 .box {
-margin: 1rem;
-border: 1px solid rgb(0 0 0/10%);
-padding: 1rem;
-background-color: #ddd;
-color: #000;    
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0/10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
+
 header, .grid, footer {
     max-width: 840px;
     margin: 0 auto;
 }
+
 .grid {
-      display: grid;
-      align-items: center;
-    }
-    
-    main {
-      grid-column: 2/3;
-      margin: 1rem;
-    }
-    
-    aside {
-      width: 20rem;
-      position: relative;
-      grid-column: 1/2;
-      grid-row: 1/2;
-    }
+    display: grid;
+    align-items: center;
+}
